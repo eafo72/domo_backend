@@ -2254,7 +2254,7 @@ app.post('/stripe/create-checkout-session', async (req, res) => {
                 billing_address_collection: 'auto',
             },
             {
-                stripeAccount: 'acct_1SAz5b3CVvaJXMYX', // ID de la cuenta conectada osea la cuenta de domo
+                stripeAccount: 'acct_1SVzYX4EUtoQThyr', // ID de la cuenta conectada osea la cuenta de domo
             }
         );
 
