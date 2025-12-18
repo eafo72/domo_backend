@@ -1091,6 +1091,7 @@ app.post('/crear-admin', async (req, res) => {
         let { no_boletos, tipos_boletos, pagado, nombre_cliente, apellidos_cliente, correo, telefono, viajeTourId, tourId, fecha_ida, horaCompleta, total } = req.body
 
         let nombre_completo = nombre_cliente + ' ' + apellidos_cliente;
+        let fecha_ida_original = fecha_ida;
 
         let today = new Date().toLocaleString('es-MX', {
             timeZone: 'America/Mexico_City',
@@ -1365,7 +1366,7 @@ app.post('/crear-admin', async (req, res) => {
         const emailData = {
             nombre: nombre_cliente,
             password: password,
-            fecha: fecha_ida,
+            fecha: fecha_ida_original,
             horario: horaCompleta,
             boletos: no_boletos,
             tablaBoletos: tablaBoletos,
@@ -1431,6 +1432,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         total = 0;
 
         let nombre_completo = nombre_cliente + ' ' + apellidos_cliente;
+        let fecha_ida_original = fecha_ida;
 
         let today = new Date().toLocaleString('es-MX', {
             timeZone: 'America/Mexico_City',
@@ -1705,7 +1707,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         const emailData = {
             nombre: nombre_cliente,
             password: password,
-            fecha: fecha_ida,
+            fecha: fecha_ida_original,
             horario: horaCompleta,
             boletos: no_boletos,
             tablaBoletos: tablaBoletos,
