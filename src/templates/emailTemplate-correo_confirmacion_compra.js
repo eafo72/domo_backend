@@ -22,7 +22,7 @@ module.exports = function generarEmail(data) {
     <html>
       <head>
         <meta charset="UTF-8" />
-        <title>Confirmación de compra - Domo Sports & Bar</title>
+        <title>Confirmación de compra - Domo Sports Bar & Grill</title>
       </head>
       <body style="margin:0; padding:0; background-color:${COLOR_FONDO};">
         <table width="600" cellpadding="0" cellspacing="0" border="0" style="margin:auto; background-color: ${COLOR_FONDO};">
@@ -33,14 +33,14 @@ module.exports = function generarEmail(data) {
                 <tr>
                   <td align="center" style="padding: 20px 40px 0 40px;">
                     <h1 style="${styleText(COLOR_AZUL, 'bolder', '40px')} text-transform: uppercase; margin: 0 0 5px 0; letter-spacing: 2px;">
-                      DOMO SPORTS & BAR
+                      Domo Sports Bar & Grill
                     </h1>
                   </td>
                 </tr>
                 <tr>
                   <td align="center" style="padding: 5px 40px 20px 40px;">
                     <h2 style="${styleText(COLOR_AZUL, 'bold', '24px')} text-transform: uppercase; margin: 0;">¡YA TIENES TUS BOLETOS PARA</h2>
-                    <h2 style="${styleText(COLOR_AZUL, 'bold', '24px')} text-transform: uppercase; margin: 0;">DOMO SPORTS & BAR!</h2>
+                    <h2 style="${styleText(COLOR_AZUL, 'bold', '24px')} text-transform: uppercase; margin: 0;">Domo Sports Bar & Grill!</h2>
                   </td>
                 </tr>
                 
@@ -159,7 +159,7 @@ module.exports = function generarEmail(data) {
                       <a href="https://ticketsdomosportsandbar.com/aviso.html" target="_blank" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Aviso de Privacidad</a>
                     </p>
                     <p style="font-size: 12px; color: #999; margin: 10px 0 0 0;">
-                      ©Copyright 2025 Domo Sports & Bar
+                      ©Copyright 2025 Domo Sports Bar & Grill
                     </p>
                   </td>
                 </tr>

@@ -300,7 +300,7 @@ const handleSuccessfulPayment = async (session) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             html: emailHtml,
             attachments: [{ filename: 'qr.png', content: qrCodeBuffer, cid: 'qrImage' }]
         });
@@ -308,7 +308,7 @@ const handleSuccessfulPayment = async (session) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             html: emailHtml,
             attachments: [{ filename: 'qr.png', content: qrCodeBuffer, cid: 'qrImage' }]
         });
@@ -475,7 +475,7 @@ const handleSuccessfulPayment_NEW = async (session) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             html: emailHtml,
             attachments: [...attachments]
         });
@@ -484,7 +484,7 @@ const handleSuccessfulPayment_NEW = async (session) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             html: emailHtml,
             attachments: [...attachments]
         });
@@ -598,14 +598,14 @@ const handleFailedPayment = async (session) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Pago fallido - Domo Sports & Bar!",
+            subject: "¡Pago fallido - Domo Sports Bar & Grill!",
             html: emailHtml
         });
 
         await mailer.sendMail({
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Pago fallido - Domo Sports & Bar!",
+            subject: "¡Pago fallido - Domo Sports Bar & Grill!",
             html: emailHtml
         });
 
@@ -1041,10 +1041,10 @@ app.post('/crear', async (req, res) => {
         <img src="cid:qrImage" alt="Código QR"/>
         
         <div style="padding-top:20px;padding-bottom:20px"><hr></div>
-        <p style="font-size:10px">Recibiste éste correo porque las preferencias de correo electrónico se configuraron para recibir notificaciones de Domo Sports & Bar.</p>
+        <p style="font-size:10px">Recibiste éste correo porque las preferencias de correo electrónico se configuraron para recibir notificaciones de Domo Sports Bar & Grill.</p>
         <p style="font-size:10px">Te pedimos que no respondas a este correo electrónico. Si tienes alguna pregunta sobre tu cuenta, contáctanos a través de la aplicación.</p>
         
-        <p style="font-size:10px;padding-top:20px">Copyright2025 Domo Sports & Bar.Todos los derechos reservados.</p></div>`;
+        <p style="font-size:10px;padding-top:20px">Copyright2025 Domo Sports Bar & Grill.Todos los derechos reservados.</p></div>`;
 
         let message = {
             from: process.env.MAIL, // sender address
@@ -1379,7 +1379,7 @@ app.post('/crear-admin', async (req, res) => {
         let message = {
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             text: "",
             html: emailHtml,
             attachments: [{
@@ -1395,7 +1395,7 @@ app.post('/crear-admin', async (req, res) => {
         message = {
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             text: "",
             html: emailHtml,
             attachments: [{
@@ -1718,7 +1718,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         let message = {
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             text: "",
             html: emailHtml,
             attachments: [{
@@ -1734,7 +1734,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         message = {
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Confirmación de compra - Domo Sports & Bar!",
+            subject: "¡Confirmación de compra - Domo Sports Bar & Grill!",
             text: "",
             html: emailHtml,
             attachments: [{
@@ -3333,14 +3333,14 @@ app.post('/stripe/cancelar-compra', async (req, res) => {
         await mailer.sendMail({
             from: process.env.MAIL,
             to: process.env.MAIL,
-            subject: "¡Compra cancelada - Domo Sports & Bar!",
+            subject: "¡Compra cancelada - Domo Sports Bar & Grill!",
             html: emailHtml
         });
 
         await mailer.sendMail({
             from: process.env.MAIL,
             to: correo,
-            subject: "¡Compra cancelada - Domo Sports & Bar!",
+            subject: "¡Compra cancelada - Domo Sports Bar & Grill!",
             html: emailHtml
         });
 
