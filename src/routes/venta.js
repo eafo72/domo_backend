@@ -245,11 +245,9 @@ const handleSuccessfulPayment = async (session) => {
             tiposBoletos = { "General": no_boletos };
         }
 
-        const precios = { tipoA: 270, tipoB: 130, tipoC: 65 };
+        const precios = { tipoA: 2500 };
         const nombres = {
-            tipoA: "Entrada General",
-            tipoB: "Ciudadano Mexicano",
-            tipoC: "Estudiante / Adulto Mayor / Niño (-12) / Capacidades diferentes"
+            tipoA: "Golden Pass"
         };
 
         let tiposBoletosArray = Object.entries(tiposBoletos).map(([tipo, cantidad]) => ({

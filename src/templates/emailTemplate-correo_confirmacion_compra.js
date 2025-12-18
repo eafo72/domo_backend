@@ -2,7 +2,7 @@
 
 module.exports = function generarEmail(data) {
   // Datos de marca
-  const COLOR_ROJO = '#a01e24';   
+  const COLOR_AZUL = '#22dce9bb'; 
   const COLOR_NEUTRO = '#1D1A14'; 
   const COLOR_FONDO = '#FFFFFF';  // Fondo blanco
   const URL_RESERVACIONES = 'https://ticketsdomosportsandbar.com/'; // URL para ver reservaciones
@@ -32,15 +32,15 @@ module.exports = function generarEmail(data) {
                 
                 <tr>
                   <td align="center" style="padding: 20px 40px 0 40px;">
-                    <h1 style="${styleText(COLOR_ROJO, 'bolder', '40px')} text-transform: uppercase; margin: 0 0 5px 0; letter-spacing: 2px;">
+                    <h1 style="${styleText(COLOR_AZUL, 'bolder', '40px')} text-transform: uppercase; margin: 0 0 5px 0; letter-spacing: 2px;">
                       DOMO SPORTS & BAR
                     </h1>
                   </td>
                 </tr>
                 <tr>
                   <td align="center" style="padding: 5px 40px 20px 40px;">
-                    <h2 style="${styleText(COLOR_ROJO, 'bold', '24px')} text-transform: uppercase; margin: 0;">¡YA TIENES TUS BOLETOS PARA</h2>
-                    <h2 style="${styleText(COLOR_ROJO, 'bold', '24px')} text-transform: uppercase; margin: 0;">DOMO SPORTS & BAR!</h2>
+                    <h2 style="${styleText(COLOR_AZUL, 'bold', '24px')} text-transform: uppercase; margin: 0;">¡YA TIENES TUS BOLETOS PARA</h2>
+                    <h2 style="${styleText(COLOR_AZUL, 'bold', '24px')} text-transform: uppercase; margin: 0;">DOMO SPORTS & BAR!</h2>
                   </td>
                 </tr>
                 
@@ -48,7 +48,7 @@ module.exports = function generarEmail(data) {
                   <td align="center" style="padding:0 40px;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="background-color: ${COLOR_ROJO}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
+                        <td style="background-color: ${COLOR_AZUL}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
                           Resumen de tu compra
                         </td>
                       </tr>
@@ -61,7 +61,7 @@ module.exports = function generarEmail(data) {
                     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="${styleText()}">
                       <tr>
                         <td width="50%" style="padding-bottom: 5px;">
-                          Adquiriste <b style="color:${COLOR_ROJO};">${data.boletos}</b> boletos para:
+                          Adquiriste <b style="color:${COLOR_AZUL};">${data.boletos}</b> boletos para:
                         </td>
                         <td width="50%" style="padding-bottom: 5px; text-align: right; font-weight: bold; line-height: 1.3;">
                           ${data.fecha}
@@ -78,14 +78,6 @@ module.exports = function generarEmail(data) {
                         <span style="font-weight: bold; color: ${COLOR_NEUTRO};">ID de Reservación:</span> ${data.idReservacion || 'N/A'}
                     </p>
 
-                    ${data.password
-                    ? `<p style="${styleText()} font-size: 14px; text-align: right; margin-top: 10px; margin-bottom: 0;">
-                              <span style="font-weight: bold; color: ${COLOR_NEUTRO};">Tu contraseña provisional:</span> ${data.password}
-                      </p>`
-                    : ''
-                    }
-
-
                   </td>
                 </tr>
 
@@ -93,7 +85,7 @@ module.exports = function generarEmail(data) {
                   <td align="center" style="padding:10px 40px 0 40px;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="background-color: ${COLOR_ROJO}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
+                        <td style="background-color: ${COLOR_AZUL}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
                           Tus entradas
                         </td>
                       </tr>
@@ -120,7 +112,6 @@ module.exports = function generarEmail(data) {
                         <td width="50%" align="left" style="padding: 10px 0; vertical-align: top; border-right: 1px solid #ffffff00;">
                           <p style="margin: 0; ${styleText(COLOR_NEUTRO, 'normal', '15px')} line-height: 1.3;">
                             <span style="font-weight: bold; color: ${COLOR_NEUTRO};">${data.direccion || 'P.º de La Marina S/N • Centro Marina • 23450 Cabo San Lucas, B.C.S.'}</span>
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04100, CDMX
                           </p>
                         </td>
                         
@@ -136,19 +127,12 @@ module.exports = function generarEmail(data) {
                   </td>
                 </tr>
 
-                <tr>
-                    <td align="center" style="padding: 0 40px 20px 40px;">
-                        <p style="${styleText()} text-align: center; margin: 0;">
-                            Para ver tus reservaciones puedes ingresar a <a href="${URL_RESERVACIONES}" style="color: ${COLOR_ROJO}; font-weight: bold; text-decoration: underline;">tu cuenta</a>.
-                        </p>
-                    </td>
-                </tr>
 
                 <tr>
                   <td align="center" style="padding:10px 40px 0 40px;">
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td style="background-color: ${COLOR_ROJO}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
+                        <td style="background-color: ${COLOR_AZUL}; color: ${COLOR_FONDO}; font-weight: bold; font-size: 18px; padding: 10px; text-align: center; font-family: Arial, sans-serif;">
                           Antes de su visita
                         </td>
                       </tr>
@@ -160,7 +144,7 @@ module.exports = function generarEmail(data) {
                   <td style="padding: 20px 40px 20px 40px; text-align: left;">
                                       
                     <p style="${styleText()} margin-bottom: 15px;">
-                      Te recordamos que tu boleto digital es tu acceso, queda estrictamente prohibido realizar copias del mismo. Consulta <a href="https://ticketsdomosportsandbar.com/pages/terminos.html" target="_blank" style="color: #1976d2; text-decoration: underline;">términos y condiciones del boleto digital</a>.
+                      Te recordamos que tu boleto digital es tu acceso, queda estrictamente prohibido realizar copias del mismo. Consulta <a href="https://ticketsdomosportsandbar.com/terminos.html" target="_blank" style="color: #1976d2; text-decoration: underline;">términos y condiciones del boleto digital</a>.
                     </p>
                   </td>
                 </tr>
@@ -171,9 +155,8 @@ module.exports = function generarEmail(data) {
                       No responda a este correo. Para cualquier consulta, escriba a <a href="mailto:contacto@ticketsdomosportsandbar.com" style="color: #1976d2; text-decoration: underline;">contacto@ticketsdomosportsandbar.com</a>
                     </p>
                     <p style="font-size: 12px; color: ${COLOR_NEUTRO}; margin: 0;">
-                      <a href="#" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Contacto</a> | 
-                      <a href="https://ticketsdomosportsandbar.com/pages/terminos.html" target="_blank" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Términos y Condiciones</a> | 
-                      <a href="https://ticketsdomosportsandbar.com/pages/aviso-privacidad.html" target="_blank" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Aviso de Privacidad</a>
+                      <a href="https://ticketsdomosportsandbar.com/terminos.html" target="_blank" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Términos y Condiciones</a> | 
+                      <a href="https://ticketsdomosportsandbar.com/aviso.html" target="_blank" style="color: #1976d2; text-decoration: underline; margin: 0 5px;">Aviso de Privacidad</a>
                     </p>
                     <p style="font-size: 12px; color: #999; margin: 10px 0 0 0;">
                       ©Copyright 2025 Domo Sports & Bar
