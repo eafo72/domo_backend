@@ -23,6 +23,7 @@ app.get('/viaje-Tours', async (req, res) => {
     v.id_reservacion AS "id_reservacion",
     v.nombre_cliente AS "nombre_visitante", 
     v.correo AS correo,
+    v.telefono AS telefono,
     v.no_boletos AS "no_boletos",
     v.checkin AS checkin,
         
@@ -278,6 +279,7 @@ app.get('/historialByEmpresa/:emId/admin/:adId', async (req, res) => {
     v.id_reservacion AS "id_reservacion",
     v.nombre_cliente AS "nombre_visitante", 
     v.correo AS correo,
+    v.telefono AS telefono,
     v.no_boletos AS "no_boletos",
     v.checkin AS checkin,
         

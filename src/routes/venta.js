@@ -1764,7 +1764,7 @@ app.post('/stripe/create-checkout-session', async (req, res) => {
     try {
         const { lineItems, customerEmail, successUrl, cancelUrl, metadata } = req.body;
 
-        const { no_boletos, tipos_boletos, nombre_cliente, cliente_id, correo, tourId, total } = metadata;
+        const { no_boletos, tipos_boletos, nombre_cliente, cliente_id, correo, telefono, tourId, total } = metadata;
         let fecha_ida_original = metadata.fecha_ida;
         let horaCompleta = normalizarHora(metadata.horaCompleta);
 
@@ -1883,9 +1883,9 @@ app.post('/stripe/create-checkout-session', async (req, res) => {
         );
 
         query = `INSERT INTO venta
-                          (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, viajeTour_id, session_id) 
+                          (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, telefono, viajeTour_id, session_id) 
                           VALUES 
-                          ('V', '${no_boletos}', '${tipos_boletos}', '0', '0', '${fecha}', '0.0', '0', '${fecha_ida_formateada}', '${fecha}', '${fecha}', '${nombre_cliente}', '${cliente_id}', '${correo}', '${viajeTourId}', '${session.id}')`;
+                          ('V', '${no_boletos}', '${tipos_boletos}', '0', '0', '${fecha}', '0.0', '0', '${fecha_ida_formateada}', '${fecha}', '${fecha}', '${nombre_cliente}', '${cliente_id}', '${correo}', '${telefono}', '${viajeTourId}', '${session.id}')`;
 
         let result = await db.pool.query(query);
         result = result[0];
