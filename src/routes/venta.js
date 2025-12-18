@@ -1413,7 +1413,7 @@ app.post('/crear-admin', async (req, res) => {
 
 
 
-        res.status(200).json({ msg: "Compra exitosa", id_reservacion: id_reservacion, viajeTourId: viajeTourId, clienteExiste: clienteExiste, error: false });
+        res.status(200).json({ msg: "Compra exitosa", id_reservacion: id_reservacion, viajeTourId: viajeTourId, error: false });
 
     } catch (error) {
         console.log(error);
@@ -1753,8 +1753,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
 
 
 
-        res.status(200).json({ msg: "Compra exitosa", id_reservacion: id_reservacion, viajeTourId: viajeTourId, clienteExiste: clienteExiste, error: false });
-
+        res.status(200).json({ msg: "Compra exitosa", id_reservacion: id_reservacion, viajeTourId: viajeTourId, error: false });
     } catch (error) {
         console.log(error);
         res.status(400).json({ error: true, details: error })
