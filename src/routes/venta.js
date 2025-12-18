@@ -2518,6 +2518,8 @@ app.get('/stripe/session/:sessionId', async (req, res) => {
                         id_reservacion, 
                         viajeTour_id,
                         session_id,
+                        pagado,
+                        status_traspaso,
                         id,
                         no_boletos,
                         total,
