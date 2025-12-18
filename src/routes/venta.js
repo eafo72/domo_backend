@@ -1110,8 +1110,12 @@ app.post('/crear-admin', async (req, res) => {
         let seCreoRegistro = false;
         let viajeTour = '';
         let query = ``;
+        
+        
+        let cliente_id = 1;
+        let password = null;
 
-
+        /*
         //Verificamos si existe el correo en la DB
         let clienteExiste = null;
         let cliente_id = null;
@@ -1145,6 +1149,7 @@ app.post('/crear-admin', async (req, res) => {
             let newClient = await db.pool.query(query);
             cliente_id = newClient[0].insertId;
         }
+        */
 
 
         //info tour para calcular fecha de regreso
@@ -1246,9 +1251,9 @@ app.post('/crear-admin', async (req, res) => {
         }
 
         query = `INSERT INTO venta 
-                        (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, viajeTour_id) 
+                        (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, telefono,  viajeTour_id) 
                         VALUES 
-                        ('V', '${no_boletos}', '${tipos_boletos}', '${total}', '${pagado}', '${fecha}', '0.0', '0', '${fecha_ida}', '${fecha}', '${fecha}', '${nombre_completo}', '${cliente_id}', '${correo}', '${viajeTourId}')`;
+                        ('V', '${no_boletos}', '${tipos_boletos}', '${total}', '${pagado}', '${fecha}', '0.0', '0', '${fecha_ida}', '${fecha}', '${fecha}', '${nombre_completo}', '${cliente_id}', '${correo}', '${telefono}', '${viajeTourId}')`;
 
         let result = await db.pool.query(query);
         result = result[0];
@@ -1293,25 +1298,21 @@ app.post('/crear-admin', async (req, res) => {
 
             if (typeof tiposBoletos !== 'object' || tiposBoletos === null || Array.isArray(tiposBoletos)) {
                 console.error('tipos_boletos no es un objeto válido:', tiposBoletos);
-                tiposBoletos = { "General": no_boletos };
+                tiposBoletos = { "Golden Pass": no_boletos };
             }
         } catch (error) {
             console.error('Error parseando tipos_boletos:', error);
-            tiposBoletos = { "General": no_boletos };
+            tiposBoletos = { "Golden Pass": no_boletos };
         }
 
         // 
         const precios = {
-            tipoA: 270,
-            tipoB: 130,
-            tipoC: 65
+            tipoA: 2500
         };
 
         // 
         const nombres = {
-            tipoA: "Entrada General",
-            tipoB: "Ciudadano Mexicano",
-            tipoC: "Estudiante / Adulto Mayor / Niño (-12) / Capacidades diferentes"
+            tipoA: "Golden Pass"
         };
 
         // 
@@ -1451,6 +1452,10 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         let query = ``;
 
 
+        let cliente_id = 1;
+        let password = null;
+
+        /*
         //Verificamos si existe el correo en la DB
         let clienteExiste = null;
         let cliente_id = null;
@@ -1484,6 +1489,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
             let newClient = await db.pool.query(query);
             cliente_id = newClient[0].insertId;
         }
+        */
 
 
         //info tour para calcular fecha de regreso
@@ -1585,9 +1591,9 @@ app.post('/crear-admin-cortesia', async (req, res) => {
         }
 
         query = `INSERT INTO venta 
-                        (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, viajeTour_id) 
+                        (id_reservacion, no_boletos, tipos_boletos, total, pagado, fecha_compra, comision, status_traspaso, fecha_comprada, created_at, updated_at, nombre_cliente, cliente_id, correo, telefono, viajeTour_id) 
                         VALUES 
-                        ('V', '${no_boletos}', '${tipos_boletos}', '${total}', '${pagado}', '${fecha}', '0.0', '${status_traspaso}', '${fecha_ida}', '${fecha}', '${fecha}', '${nombre_completo}', '${cliente_id}', '${correo}', '${viajeTourId}')`;
+                        ('V', '${no_boletos}', '${tipos_boletos}', '${total}', '${pagado}', '${fecha}', '0.0', '${status_traspaso}', '${fecha_ida}', '${fecha}', '${fecha}', '${nombre_completo}', '${cliente_id}', '${correo}', '${telefono}', '${viajeTourId}')`;
 
         let result = await db.pool.query(query);
         result = result[0];
@@ -1632,25 +1638,21 @@ app.post('/crear-admin-cortesia', async (req, res) => {
 
             if (typeof tiposBoletos !== 'object' || tiposBoletos === null || Array.isArray(tiposBoletos)) {
                 console.error('tipos_boletos no es un objeto válido:', tiposBoletos);
-                tiposBoletos = { "General": no_boletos };
+                tiposBoletos = { "Golden Pass": no_boletos };
             }
         } catch (error) {
             console.error('Error parseando tipos_boletos:', error);
-            tiposBoletos = { "General": no_boletos };
+            tiposBoletos = { "Golden Pass": no_boletos };
         }
 
         // 
         const precios = {
-            tipoA: 270,
-            tipoB: 130,
-            tipoC: 65
+            tipoA: 2500
         };
 
         // 
         const nombres = {
-            tipoA: "Entrada General",
-            tipoB: "Ciudadano Mexicano",
-            tipoC: "Estudiante / Adulto Mayor / Niño (-12) / Capacidades diferentes"
+            tipoA: "Golden Pass"
         };
 
         // 
