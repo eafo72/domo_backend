@@ -245,7 +245,7 @@ const handleSuccessfulPayment = async (session) => {
             tiposBoletos = { "General": no_boletos };
         }
 
-        const precios = { tipoA: 2500 };
+        const precios = { tipoA: 3240 };
         const nombres = {
             tipoA: "Golden Pass"
         };
@@ -1308,7 +1308,7 @@ app.post('/crear-admin', async (req, res) => {
 
         // 
         const precios = {
-            tipoA: 2500
+            tipoA: 3240
         };
 
         // 
@@ -1649,7 +1649,7 @@ app.post('/crear-admin-cortesia', async (req, res) => {
 
         // 
         const precios = {
-            tipoA: 2500
+            tipoA: 3240
         };
 
         // 
