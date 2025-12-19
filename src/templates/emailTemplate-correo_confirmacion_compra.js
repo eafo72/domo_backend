@@ -61,7 +61,7 @@ module.exports = function generarEmail(data) {
                     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="${styleText()}">
                       <tr>
                         <td width="50%" style="padding-bottom: 5px;">
-                          Adquiriste <b style="color:${COLOR_AZUL};">${data.boletos}</b> boletos para:
+                          Adquiriste <b style="color:${COLOR_AZUL};">${data.boletos}</b> boleto(s) para:
                         </td>
                         <td width="50%" style="padding-bottom: 5px; text-align: right; font-weight: bold; line-height: 1.3;">
                           ${data.fecha}

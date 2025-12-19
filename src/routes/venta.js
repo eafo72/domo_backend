@@ -2495,7 +2495,7 @@ app.put('/checkin', async (req, res) => {
         if (nowCDMX.toDateString() !== fechaIdaTourCDMX.toDateString()) {
             return res.status(403).json({
                 error: true,
-                msg: `Check-in solo permitido el día del tour (${fechaIdaTourCDMX.toLocaleDateString("es-MX")}).`
+                msg: `Check-in solo permitido el día (${fechaIdaTourCDMX.toLocaleDateString("es-MX")}).`
             });
         }
 
@@ -2632,7 +2632,7 @@ app.put('/checkin-new', async (req, res) => {
         if (nowCDMX.toDateString() !== fechaIdaTourCDMX.toDateString()) {
             return res.status(403).json({
                 error: true,
-                msg: `Check-in solo permitido el día del tour (${fechaIdaTourCDMX.toLocaleDateString("es-MX")}).`
+                msg: `Check-in solo permitido el día (${fechaIdaTourCDMX.toLocaleDateString("es-MX")}).`
             });
         }
 
